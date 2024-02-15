@@ -1,0 +1,378 @@
+:root {
+  font-size: 62.5%;
+
+  --dark-background-color: #0f161e;
+  --white-background-color: white;
+  --border-color: rgb(53, 53, 53);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1.6rem;
+  height: 100%;
+}
+
+header,
+main,
+footer,
+body {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--dark-background-color);
+}
+
+/* Top Bar */
+header {
+  height: 60px;
+  width: 99vw;
+  margin-bottom: 3px;
+  align-self: center;
+}
+
+.navbar {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  min-width: inherit;
+}
+
+.navbar-container {
+  position: fixed;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  min-width: inherit;
+  max-height: inherit;
+  min-height: inherit;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid var(--border-color);
+}
+
+.navbar-logo-button {
+  display: flex;
+  border: none;
+  background: transparent;
+  margin-left: 15px;
+  cursor: pointer;
+  width: 5%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo {
+  display: flex;
+  width: 125px;
+  height: 70px;
+  margin-left: 28px;
+}
+
+.searchbar {
+  display: flex;
+  width: 45%;
+  height: 40px;
+  background-color: #1a2838;
+  border: none;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar:hover {
+  background-color: #25384f;
+}
+
+.searchbar-bar {
+  display: flex;
+  width: 95%;
+  height: inherit;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: text;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.searchbar-bar::placeholder {
+  color: #98aece;
+  font-size: 1.4rem;
+}
+
+.searchbar-button {
+  display: flex;
+  background: transparent;
+  border: none;
+  width: 3rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.searchbar-image {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar-profile-button {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar-profile-button:hover {
+  background-color: #273b52;
+  border: none;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.navbar-profile-button-image {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+}
+
+.navbar-profile-button-text {
+  font-size: 1.7rem;
+  color: white;
+  margin-left: 0.7rem;
+}
+
+#navbar-profile-menu-button {
+  padding: 0.4rem;
+  margin-left: 0.6rem;
+}
+
+.navbar-profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-menu {
+  position: fixed;
+  display: flex;
+  left: 90%;
+  right: 1%;
+  top: 6%;
+  flex-direction: column;
+  visibility: hidden;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgb(19, 27, 34);
+  width: 230px;
+  list-style: none;
+  margin-left: auto;
+  box-shadow: 0.05rem 0.05rem 0.1rem;
+  z-index: 1;
+}
+
+.profile-menu-item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  justify-self: center;
+}
+
+.profile-menu-button {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 1rem;
+}
+
+.profile-menu-button-text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  align-items: start;
+}
+
+.profile-menu-item:hover {
+  background-color: rgb(22, 33, 44);
+}
+
+.profile-menu-button-text {
+  display: flex;
+  align-self: center;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.profile-menu-button-tag {
+  color: gray;
+}
+
+.profile-menu-button-profile-picture {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.profile-menu-button-logo {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  margin-right: 1rem;
+  align-self: center;
+}
+
+#advertise-button {
+  border-top: 0.05rem solid rgb(57, 57, 57);
+}
+
+#settings-button {
+  border-top: 0.05rem solid rgb(57, 57, 57);
+}
+
+#premium-button {
+  border-top: 0.05rem solid rgb(57, 57, 57);
+}
+
+.theme-button-wrapper {
+  display: flex;
+  align-items: center;
+  width: 55px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.theme-button-slider {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  background-color: rgb(32, 78, 244);
+  border-radius: 50px;
+}
+
+.theme-button-pointer {
+  display: flex;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border: 0.05rem solid gray;
+  border-radius: 50%;
+  margin-left: 3px;
+  transform: translateX(60%);
+  transition: 0.3s;
+}
+
+/* Main Section */
+/* Left Sidebar */
+main {
+  height: 100%;
+}
+
+.left-sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  border-right: 0.05rem solid var(--border-color);
+}
+
+.left-sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 25px 0 auto;
+  padding-bottom: 15px;
+  border-bottom: 0.05rem solid var(--border-color);
+  justify-content: center;
+  align-content: center;
+  width: 45%;
+}
+
+.nav-button {
+  display: flex;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  align-items: center;
+  width: 100%;
+  border-radius: 10%;
+  padding: 1rem;
+}
+
+.nav-button:hover {
+  background: #121b24;
+}
+
+#page-nav-home-button {
+  background: #192532;
+}
+
+.nav-button-image {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 10px;
+}
+
+#nav-recent-text {
+  color: rgb(146, 146, 146);
+  font-size: 1.2rem;
+}
+
+#nav-recent-arrow {
+  margin-left: auto;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.nav-pfp {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
